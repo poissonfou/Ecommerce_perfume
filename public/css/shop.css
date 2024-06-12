@@ -1,0 +1,201 @@
+* {
+  font-family: "Geologica", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 0.5em;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  color: rgb(36, 155, 36);
+  z-index: 5;
+}
+
+header a {
+  text-decoration: none;
+  color: rgb(36, 155, 36);
+}
+
+header a:visited {
+  color: rgb(36, 155, 36);
+}
+.logo {
+  font-size: 2.5rem;
+  font-family: "Unbounded", sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 5em));
+  margin: 0;
+  justify-content: end;
+  padding: 0;
+  font-size: 1.2rem;
+  gap: 2.5em;
+  align-items: center;
+}
+
+nav ul > *:hover {
+  cursor: pointer;
+}
+
+.shopping__bag {
+  font-size: 2rem;
+}
+
+.categories__section {
+  padding-top: 2.5em;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  overflow-y: hidden;
+}
+
+.categories__section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.categories__section img:hover,
+.overlay:hover {
+  cursor: pointer;
+}
+
+.category {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 2;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background-color: rgba(139, 53, 53, 0.5);
+  color: white;
+  font-size: 2rem;
+  font-family: "Unbounded", sans-serif;
+  transform: translateY(100%);
+}
+
+.category:hover .overlay {
+  transform: translateY(0%);
+  transition: 0.5s;
+}
+
+.popular__section h1 {
+  font-size: 2.5rem;
+  font-family: "Unbounded", sans-serif;
+  color: rgb(36, 155, 36);
+  margin-left: 0.5em;
+}
+
+.grid__popular {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "row_one"
+    "row_two";
+  row-gap: 1em;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+}
+
+.row--one {
+  grid-area: row_one;
+}
+
+.row--two {
+  grid-area: row_two;
+}
+
+.product__card {
+  padding: 1em;
+  border-right: solid 1px rgb(36, 155, 36);
+}
+
+.product__card:hover .product__desc p {
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.product__card:hover .product__desc .hover__btn {
+  transition: 0.2s;
+  display: block;
+}
+
+.product__card:hover {
+  cursor: pointer;
+}
+
+.product__card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product__title {
+  margin: 0;
+  font-size: 1.2rem;
+  color: rgb(36, 155, 36);
+  font-family: "Unbounded", sans-serif;
+}
+
+.product__price {
+  margin-top: 0.2em;
+  font-size: 1rem;
+}
+
+.product__desc {
+  position: relative;
+  margin-top: 1em;
+}
+
+.product__desc p {
+  transition: 0.2s;
+  margin-bottom: 0;
+}
+
+.hover__btn {
+  position: absolute;
+  width: 100%;
+  display: none;
+  transition: 0.2s;
+}
+
+.hover__btn button {
+  background: rgb(36, 155, 36);
+  font-size: 1.2rem;
+  padding: 0.5em 2em;
+  width: 100%;
+  border: solid 2px rgb(36, 155, 36);
+  color: white;
+  transition: 0.2s;
+}
+
+.hover__btn button:hover {
+  cursor: pointer;
+  background: white;
+  color: rgb(36, 155, 36);
+  transition: 0.2s;
+}
