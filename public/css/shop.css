@@ -3,7 +3,9 @@
 }
 
 body {
+  padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 header {
@@ -106,6 +108,7 @@ nav ul > *:hover {
 }
 
 .grid__popular {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
@@ -113,11 +116,12 @@ nav ul > *:hover {
     "row_one"
     "row_two";
   row-gap: 1em;
+  width: calc(100% + 300px * 6);
 }
 
 .row {
   display: grid;
-  grid-template-columns: repeat(4, 300px);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
 }
 
 .row--one {
@@ -130,7 +134,12 @@ nav ul > *:hover {
 
 .product__card {
   padding: 1em;
-  border-right: solid 1px rgb(36, 155, 36);
+  position: relative;
+  align-self: start;
+}
+
+.product__card + .product__card {
+  border-left: solid 1px rgb(36, 155, 36);
 }
 
 .product__card:hover .product__desc p {
@@ -149,7 +158,7 @@ nav ul > *:hover {
 
 .product__card img {
   width: 100%;
-  height: 60%;
+  height: 25em;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -167,7 +176,6 @@ nav ul > *:hover {
 }
 
 .product__desc {
-  position: relative;
   margin-top: 1em;
 }
 
@@ -178,9 +186,10 @@ nav ul > *:hover {
 
 .hover__btn {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 2em);
   display: none;
   transition: 0.2s;
+  bottom: 1em;
 }
 
 .hover__btn button {
@@ -198,4 +207,174 @@ nav ul > *:hover {
   background: white;
   color: rgb(36, 155, 36);
   transition: 0.2s;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(36, 155, 36);
+  padding: 0.5em;
+  border-radius: 50%;
+  color: white;
+  box-shadow: 0px 2px 5px black;
+  display: none;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.arrow__forward__one,
+.arrow__backward__one {
+  grid-area: row_one;
+}
+
+.arrow__forward__two,
+.arrow__backward__two {
+  grid-area: row_two;
+}
+
+.show-arrows {
+  display: block;
+}
+
+.arrow__backward__one,
+.arrow__backward__two {
+  left: 2em;
+}
+
+.arrow__forward__one,
+.arrow__forward__two {
+  left: 40%;
+}
+
+.special__offer__section__background {
+  background: url("../assets/background-grid-four.jpg");
+  padding: 3em;
+  margin: 5em 0em;
+}
+
+.special__offer__section {
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+}
+
+.special__offer__section h1 {
+  font-size: 2.5rem;
+  font-family: "Unbounded", sans-serif;
+  color: rgb(36, 155, 36);
+  margin: 0em;
+  margin-bottom: 1em;
+}
+
+.special__offer__container {
+  display: grid;
+  grid-template-columns: 300px 500px;
+  box-shadow: 2px 2px 10px black;
+  width: fit-content;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.special__offer__container img {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.special__offer__information__container {
+  padding: 2em;
+  position: relative;
+}
+
+.special__offer__information__container h2 {
+  font-size: 2.2rem;
+  font-family: "Unbounded", sans-serif;
+  color: rgb(36, 155, 36);
+  margin: 0em;
+}
+
+.special__offer__information__container s {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.special__offer__old__price {
+  margin-bottom: 0;
+}
+
+.special__offer__price {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.special__offer__price span {
+  font-size: 1rem;
+}
+
+.special__offer__information__container button {
+  position: absolute;
+  background: rgb(36, 155, 36);
+  font-size: 1.2rem;
+  padding: 0.5em 2em;
+  width: calc(100% - 3.3em);
+  border: solid 2px rgb(36, 155, 36);
+  color: white;
+  transition: 0.2s;
+  bottom: 1em;
+}
+
+.special__offer__information__container button:hover {
+  cursor: pointer;
+}
+
+.product__collection {
+  width: 100%;
+  margin-top: 2em;
+}
+
+.banner {
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  font-family: "Unbounded", sans-serif;
+  color: rgb(36, 155, 36);
+  margin-left: 0.5em;
+  background-color: #fba12a;
+  width: fit-content;
+  padding: 0.2em 0.3em;
+}
+
+.banner--one {
+  background: url("../assets/fruit_banner.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  object-fit: cover;
+  width: 100%;
+  padding: 8em 0em;
+}
+
+.banner--two {
+  background: url("../assets/couple_banner.jpg");
+  background-repeat: no-repeat;
+  background-position: 70% 20%;
+  object-fit: cover;
+  width: 100%;
+  padding: 8em 0em;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: right;
+}
+
+.banner--two h1 {
+  margin-right: 0.5em;
+  color: #fba12a;
+  background-color: rgb(36, 155, 36);
 }
