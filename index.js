@@ -17,4 +17,8 @@ app.get("/pages/shop.html", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "shop.html"));
 });
 
+app.get("/pages/login.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "login.html"));
+});
+
 app.listen(3000, () => console.log("server running"));

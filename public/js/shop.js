@@ -1,40 +1,53 @@
-const rowOne = document.getElementsByClassName("row--one")[0];
-const rowTwo = document.getElementsByClassName("row--two")[0];
+const productsCarrousel = document.getElementsByClassName(
+  "products__carrousel"
+);
 
-const arrowBackward = document.getElementsByClassName(
-  "arrow__backward__one"
-)[0];
-const arrowForward = document.getElementsByClassName("arrow__forward__one")[0];
-const controlArrows = document.getElementsByClassName("arrow");
-
-function show() {
+function showArrows(arrowForward, arrowBackward) {
   if (arrowBackward.classList.contains("show-arrows")) return;
   arrowBackward.classList.add("show-arrows");
   arrowForward.classList.add("show-arrows");
 }
 
-for (let i = 0; i < controlArrows.length; i++) {
-  controlArrows[i].addEventListener("mouseenter", (e) => {
-    show();
-  });
-  controlArrows[i].addEventListener("click", () => console.log("click"));
-}
-
-rowOne.addEventListener("mouseenter", show);
-rowTwo.addEventListener("mouseenter", () => {
-  const arrowForward = document.getElementsByClassName(
-    "arrow__forward__two"
-  )[0];
-  const arrowBackward = document.getElementsByClassName(
-    "arrow__backward__two"
-  )[0];
-  if (arrowBackward.classList.contains("show-arrows")) return;
-  arrowBackward.classList.add("show-arrows");
-  arrowForward.classList.add("show-arrows");
-});
-
-rowOne.addEventListener("mouseleave", () => {
+function hideArrows(arrowForward, arrowBackward) {
   if (!arrowBackward.classList.contains("show-arrows")) return;
   arrowBackward.classList.remove("show-arrows");
   arrowForward.classList.remove("show-arrows");
-});
+}
+
+function moveForward(element) {
+  console.log("on est la");
+  element.scrollBy({ left: 350, behavior: "smooth" });
+}
+
+function moveBackwards(element) {
+  element.scrollBy({ left: -350, behavior: "smooth" });
+}
+
+for (let i = 0; i < productsCarrousel.length; i++) {
+  const arrowForward = document.getElementById("arrow__forward__" + i);
+  const arrowBackward = document.getElementById("arrow__backward__" + i);
+
+  arrowBackward.addEventListener("mouseenter", () =>
+    showArrows(arrowForward, arrowBackward)
+  );
+
+  arrowBackward.addEventListener("click", () =>
+    moveBackwards(productsCarrousel[i])
+  );
+
+  arrowForward.addEventListener("mouseenter", () =>
+    showArrows(arrowForward, arrowBackward)
+  );
+
+  arrowForward.addEventListener("click", () =>
+    moveForward(productsCarrousel[i])
+  );
+
+  productsCarrousel[i].addEventListener("mouseenter", () =>
+    showArrows(arrowForward, arrowBackward)
+  );
+
+  productsCarrousel[i].addEventListener("mouseleave", () =>
+    hideArrows(arrowForward, arrowBackward)
+  );
+}
