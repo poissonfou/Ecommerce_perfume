@@ -97,3 +97,15 @@ section h1 {
   font-size: 1.2rem;
   padding: 0.2em;
 }
+
+.input__err {
+  border: solid 1px red !important;
+}
+
+.err__hidden {
+  display: none;
+}
+
+.validation__err {
+  font-size: 1rem;
+}

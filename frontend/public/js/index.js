@@ -1,3 +1,4 @@
+//changing color of the header after scrolling down page
 document.addEventListener("scroll", (e) => {
   const header = document.getElementById("header");
   if (window.scrollY == 0 && header.classList == "white-background") {
@@ -11,6 +12,7 @@ document.addEventListener("scroll", (e) => {
 
 let elementLayer = document.getElementById("gallery");
 
+//created the smooth sliding effect on the products gallery
 elementLayer.addEventListener("mousemove", (event) => {
   let x = event.clientX;
 

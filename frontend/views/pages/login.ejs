@@ -1,0 +1,75 @@
+<%- include("../includes/head.ejs") %>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/login.js" defer></script>
+    <title>NEU - Login</title>
+    </head>
+
+    <body>
+        <header id="header">
+            <a href="#">
+                <span class=" logo">
+                    NEU
+                </span>
+            </a>
+            <nav>
+                <ul>
+                    <a href="/pages/login">
+                        <li>Shop</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+        <main class="main__container">
+            <section class="login__section">
+                <h1>Login</h1>
+                <% if (error.type=='login' ) { %>
+                    <span class="validation__err" style="margin-left: 1em;">
+                        <%= error.message %>
+                    </span>
+                    <% } %>
+                        <form action="/pages/login" method="POST">
+                            <div class="input__container">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email_login">
+                                <span class="err__hidden validation__err" id="err_email_login">Please enter a
+                                    valid email</span>
+                            </div>
+                            <div class="input__container">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password_login" minlength="6">
+                                <span class="err__hidden validation__err" id="err_password_login"></span>
+                            </div>
+                            <button type="submit">Login</button>
+                        </form>
+            </section>
+            <section class="register__section">
+                <h1>Sign-in</h1>
+                <% if (error.type=='signup' ) { %>
+                    <span class="validation__err" style="margin-left: 1em;">
+                        <%= error.message %>
+                    </span>
+                    <% } %>
+                        <form action="/pages/signup" method="POST">
+                            <div class="input__container">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email_signup">
+                                <span class="err__hidden validation__err" id="err_email_signup">Please enter a valid
+                                    email</span>
+                            </div>
+                            <div class="input__container">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password_signup" minlength="6">
+                                <span class="err__hidden validation__err" id="err_password_signup"></span>
+                            </div>
+                            <div class="input__container">
+                                <label for="confirm">Confirm your password</label>
+                                <input type="password" name="confirm" id="confirm_signup" minlength="6">
+                                <span class="err__hidden validation__err" id="err_confirm_signup"></span>
+                            </div>
+                            <button type="submit">Sign in</button>
+                        </form>
+            </section>
+        </main>
+    </body>
+
+    </html>
