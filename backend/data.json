@@ -1,6 +1,7 @@
 [
   {
     "email": "e@gomes.gmail.com",
-    "password": "123456"
+    "password": "123456",
+    "cart": 15
   }
 ]

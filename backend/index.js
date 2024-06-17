@@ -80,7 +80,11 @@ amqp.connect("amqp://localhost", (err, connection) => {
         }
 
         //sending response to the reply queue in the frontend
-        const response = JSON.stringify({ status: "OK", message: null });
+        const response = JSON.stringify({
+          status: "OK",
+          message: null,
+          data: fileData[isRegistered].cart,
+        });
         channel.sendToQueue(data.properties.replyTo, Buffer.from(response), {
           correlationId: data.properties.correlationId,
         });
@@ -145,13 +149,53 @@ amqp.connect("amqp://localhost", (err, connection) => {
           return;
         }
 
-        fileData.push({ email, password });
+        fileData.push({ email, password, cart: [] });
 
         //writing updated data
         fs.writeFileSync("data.json", JSON.stringify(fileData, null, 2));
 
         //sending response to the reply queue in the frontend
-        const response = JSON.stringify({ status: "OK", message: null });
+        const response = JSON.stringify({
+          status: "OK",
+          message: null,
+          data: fileData[isRegistered].cart,
+        });
+        channel.sendToQueue(data.properties.replyTo, Buffer.from(response), {
+          correlationId: data.properties.correlationId,
+        });
+      }
+
+      if (dataParsed.operation == "add-product") {
+        const email = dataParsed.email;
+        const fileData = await JSON.parse(fs.readFileSync("data.json"));
+
+        const userIdx = fileData.map((user) => user.email).indexOf(email);
+
+        fileData[userIdx].cart++;
+
+        fs.writeFileSync("data.json", JSON.stringify(fileData, null, 2));
+
+        const response = JSON.stringify({
+          status: "OK",
+          message: null,
+          data: fileData[userIdx].cart,
+        });
+        channel.sendToQueue(data.properties.replyTo, Buffer.from(response), {
+          correlationId: data.properties.correlationId,
+        });
+      }
+
+      if (dataParsed.operation == "get-cart") {
+        const email = dataParsed.email;
+        const fileData = await JSON.parse(fs.readFileSync("data.json"));
+
+        const userIdx = fileData.map((user) => user.email).indexOf(email);
+
+        const response = JSON.stringify({
+          status: "OK",
+          message: null,
+          data: fileData[userIdx] ? fileData[userIdx].cart : 0,
+        });
         channel.sendToQueue(data.properties.replyTo, Buffer.from(response), {
           correlationId: data.properties.correlationId,
         });

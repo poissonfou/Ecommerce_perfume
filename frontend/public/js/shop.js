@@ -59,3 +59,9 @@ for (let i = 0; i < productsCarrousel.length; i++) {
     hideArrows(arrowForward, arrowBackward)
   );
 }
+
+//submits logout form
+const logoutBtn = document.getElementById("logout__btn");
+logoutBtn?.addEventListener("click", () => {
+  document.getElementById("logout-form").submit();
+});

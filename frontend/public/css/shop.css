@@ -1,55 +1,9 @@
-* {
-  font-family: "Geologica", sans-serif;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-}
-
 header {
-  background-color: white;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding: 0.5em;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  color: rgb(36, 155, 36);
-  z-index: 5;
+  background-color: white !important;
 }
 
-header a {
-  text-decoration: none;
-  color: rgb(36, 155, 36);
-}
-
-header a:visited {
-  color: rgb(36, 155, 36);
-}
-.logo {
-  font-size: 2.5rem;
-  font-family: "Unbounded", sans-serif;
-}
-
-nav ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 5em));
-  margin: 0;
-  justify-content: end;
-  padding: 0;
-  font-size: 1.2rem;
+header ul {
   gap: 2.5em;
-  align-items: center;
-}
-
-nav ul > *:hover {
-  cursor: pointer;
-}
-
-.shopping__bag {
-  font-size: 2rem;
 }
 
 .categories__section {
@@ -422,29 +376,5 @@ nav ul > *:hover {
 }
 
 footer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  align-items: center;
-  background-color: rgb(36, 155, 36);
-  color: white;
-  font-size: 1rem;
-  padding: 0.5em;
   margin-top: 2em;
-}
-
-footer a {
-  color: white;
-}
-
-footer div {
-  text-align: end;
-}
-
-footer i {
-  font-size: 1.5rem;
-  padding: 0.2em;
-}
-
-footer i:hover {
-  cursor: pointer;
 }

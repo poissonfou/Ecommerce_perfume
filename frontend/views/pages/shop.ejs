@@ -1,610 +1,680 @@
 <%- include("../includes/head.ejs") %>
+    <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/shop.css">
     <script src="/js/shop.js" defer></script>
     <title>NEU - Shop</title>
     </head>
 
     <body>
-        <header id="header">
-            <a href="#">
-                <span class=" logo">
-                    NEU
-                </span>
-            </a>
-            <nav>
-                <ul>
-                    <a href="/pages/login">
-                        <li>Login/Register</li>
-                    </a>
-                    <a href="../pages/shop.html">
-                        <li>
-                            <span class="material-symbols-outlined shopping__bag">
-                                shopping_bag
-                            </span>
-                        </li>
-                    </a>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="categories__section">
-                <div class="category">
-                    <img src="/assets/men_section.jpg" alt="">
-                    <div class="overlay">Men</div>
-                </div>
-                <div class="category">
-                    <img src="/assets/women_section.jpg" alt="">
-                    <div class="overlay">Women</div>
-                </div>
-                <div class="category">
-                    <img src="/assets/skincare.jpg" alt="">
-                    <div class="overlay">Skincare</div>
-                </div>
-                <div class="category">
-                    <img src="/assets/bath_products.jpg" alt="">
-                    <div class="overlay">Bath&Body</div>
-                </div>
-            </section>
-            <section class="popular__section">
-                <h1>Popular Products</h1>
-                <div class="grid__popular">
-
-                    <span class="material-symbols-outlined arrow arrow__backward__one" id="arrow__backward__0">
-                        arrow_back_ios
-                    </span>
-                    <span class="material-symbols-outlined arrow arrow__forward__one" id="arrow__forward__0">
-                        arrow_forward_ios
-                    </span>
-
-                    <div class="row row--one products__carrousel">
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
+        <%- include('../includes/header.ejs') %>
+            <main>
+                <section class="categories__section">
+                    <div class="category">
+                        <img src="/assets/men_section.jpg" alt="">
+                        <div class="overlay">Men</div>
                     </div>
-
-                    <span class="material-symbols-outlined arrow arrow__backward__two" id="arrow__backward__1">
-                        arrow_back_ios
-                    </span>
-                    <span class="material-symbols-outlined arrow arrow__forward__two" id="arrow__forward__1">
-                        arrow_forward_ios
-                    </span>
-
-                    <div class="row row--two products__carrousel">
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product__card">
-                            <img src="/assets/perfume_fruits.jpg" alt="">
-                            <p class="product__title">Product Title</p>
-                            <p class="product__price">R$ 200,00</p>
-                            <div class="product__desc">
-                                <p>This is product description, describing what the product does.</p>
-                                <div class="hover__btn">
-                                    <button>BUY</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="category">
+                        <img src="/assets/women_section.jpg" alt="">
+                        <div class="overlay">Women</div>
                     </div>
-                </div>
-            </section>
-            <div class="special__offer__section__background">
-                <section class="special__offer__section">
-                    <h1>Today's special offer</h1>
-                    <div class="special__offer__container">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <div class="special__offer__information__container">
-                            <h2>This is a special offer for today.</h2>
-                            <p class="special__offer__old__price"><s>R$150,00</s></p>
-                            <p class="special__offer__price">R$110<span>,00</span></p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, neque minus ab
-                                necessitatibus
-                                dicta ad ea voluptates optio molestiae voluptatem error quos dolor sapiente iusto hic
-                                debitis
-                                atque. Maiores, similique.</p>
-                            <button>BUY</button>
+                    <div class="category">
+                        <img src="/assets/skincare.jpg" alt="">
+                        <div class="overlay">Skincare</div>
+                    </div>
+                    <div class="category">
+                        <img src="/assets/bath_products.jpg" alt="">
+                        <div class="overlay">Bath&Body</div>
+                    </div>
+                </section>
+                <section class="popular__section">
+                    <h1>Popular Products</h1>
+                    <div class="grid__popular">
+
+                        <span class="material-symbols-outlined arrow arrow__backward__one" id="arrow__backward__0">
+                            arrow_back_ios
+                        </span>
+                        <span class="material-symbols-outlined arrow arrow__forward__one" id="arrow__forward__0">
+                            arrow_forward_ios
+                        </span>
+
+                        <div class="row row--one products__carrousel">
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="material-symbols-outlined arrow arrow__backward__two" id="arrow__backward__1">
+                            arrow_back_ios
+                        </span>
+                        <span class="material-symbols-outlined arrow arrow__forward__two" id="arrow__forward__1">
+                            arrow_forward_ios
+                        </span>
+
+                        <div class="row row--two products__carrousel">
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <form action="/add-product" method="POST">
+                                            <button type="submit">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
-            </div>
-            <section class="product__collection product__collection--one">
-                <div class="banner banner--one">
-                    <h1>Smell like a fruit salad</h1>
+                <div class="special__offer__section__background">
+                    <section class="special__offer__section">
+                        <h1>Today's special offer</h1>
+                        <div class="special__offer__container">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <div class="special__offer__information__container">
+                                <h2>This is a special offer for today.</h2>
+                                <p class="special__offer__old__price"><s>R$150,00</s></p>
+                                <p class="special__offer__price">R$110<span>,00</span></p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, neque minus ab
+                                    necessitatibus
+                                    dicta ad ea voluptates optio molestiae voluptatem error quos dolor sapiente iusto
+                                    hic
+                                    debitis
+                                    atque. Maiores, similique.</p>
+                                <button>BUY</button>
+                            </div>
+                        </div>
+                    </section>
                 </div>
+                <section class="product__collection product__collection--one">
+                    <div class="banner banner--one">
+                        <h1>Smell like a fruit salad</h1>
+                    </div>
 
-                <span class="material-symbols-outlined arrow arrow__backward__three" id="arrow__backward__2">
-                    arrow_back_ios
-                </span>
-                <span class="material-symbols-outlined arrow arrow__forward__three" id="arrow__forward__2">
-                    arrow_forward_ios
-                </span>
+                    <span class="material-symbols-outlined arrow arrow__backward__three" id="arrow__backward__2">
+                        arrow_back_ios
+                    </span>
+                    <span class="material-symbols-outlined arrow arrow__forward__three" id="arrow__forward__2">
+                        arrow_forward_ios
+                    </span>
 
-                <div class="row products__carrousel">
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
+                    <div class="row products__carrousel">
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
+                </section>
+                <section class="product__collection product__collection--two">
+                    <div class="banner banner--two">
+                        <h1>For you and your love</h1>
                     </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="product__collection product__collection--two">
-                <div class="banner banner--two">
-                    <h1>For you and your love</h1>
-                </div>
 
-                <span class="material-symbols-outlined arrow arrow__backward__four" id="arrow__backward__3">
-                    arrow_back_ios
-                </span>
-                <span class="material-symbols-outlined arrow arrow__forward__four" id="arrow__forward__3">
-                    arrow_forward_ios
-                </span>
+                    <span class="material-symbols-outlined arrow arrow__backward__four" id="arrow__backward__3">
+                        arrow_back_ios
+                    </span>
+                    <span class="material-symbols-outlined arrow arrow__forward__four" id="arrow__forward__3">
+                        arrow_forward_ios
+                    </span>
 
-                <div class="row products__carrousel">
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
+                    <div class="row products__carrousel">
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__card">
+                            <img src="/assets/perfume_fruits.jpg" alt="">
+                            <p class="product__title">Product Title</p>
+                            <p class="product__price">R$ 200,00</p>
+                            <div class="product__desc">
+                                <p>This is product description, describing what the product does.</p>
+                                <div class="hover__btn">
+                                    <form action="/add-product" method="POST">
+                                        <button type="submit">ADD TO CART</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product__card">
-                        <img src="/assets/perfume_fruits.jpg" alt="">
-                        <p class="product__title">Product Title</p>
-                        <p class="product__price">R$ 200,00</p>
-                        <div class="product__desc">
-                            <p>This is product description, describing what the product does.</p>
-                            <div class="hover__btn">
-                                <button>BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <%- include('../includes/footer.ejs') %>
+                </section>
+            </main>
+            <%- include('../includes/footer.ejs') %>
     </body>
 
     </html>

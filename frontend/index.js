@@ -2,6 +2,7 @@ const express = require("express");
 const amqp = require("amqplib/callback_api");
 const path = require("path");
 const { EventEmitter } = require("events");
+const session = require("express-session");
 
 const app = express();
 const Event = new EventEmitter();
@@ -9,6 +10,13 @@ const Event = new EventEmitter();
 app.set("view engine", "ejs");
 app.set("views", "views");
 app.use(express.json());
+app.use(
+  session({
+    secret: "this is a secret",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 
 const pagesRoutes = require("./routes/pages");
@@ -53,7 +61,52 @@ amqp.connect("amqp://localhost", (err, connection) => {
       app.use(express.static(path.join(__dirname, "public")));
 
       app.get("/", (req, res) => {
-        res.redirect("/pages/homes");
+        res.redirect("/pages/home");
+      });
+
+      app.get("/pages/shop", (req, res) => {
+        const data = JSON.stringify({
+          operation: "get-cart",
+          email: req.session.email,
+        });
+
+        channel.sendToQueue("rpc_queue", Buffer.from(data), {
+          correlationId: correlationId,
+          replyTo: replyQueue.queue,
+          headers: {
+            function: data.operation,
+          },
+        });
+
+        Event.once(correlationId, (data) => {
+          const responseParsed = JSON.parse(data.content.toString());
+          if (responseParsed.status == "ERROR") {
+            res.render("pages/shop", {
+              error: null,
+              isLoggedIn: req.session.isLoggedIn,
+              route: "pages/shop",
+              cart: 0,
+            });
+            return;
+          }
+
+          console.log(responseParsed);
+
+          res.render("pages/shop", {
+            error: null,
+            isLoggedIn: req.session.isLoggedIn,
+            route: "pages/shop",
+            cart: responseParsed.data,
+          });
+          return;
+        });
+
+        console.log(
+          "we are here",
+          req.session,
+          req.session.email,
+          req.session.isLoggedIn
+        );
       });
 
       //GET routes that just render new pages
@@ -107,7 +160,9 @@ amqp.connect("amqp://localhost", (err, connection) => {
               },
             });
           }
-          res.render("pages/shop");
+          req.session.isLoggedIn = true;
+          req.session.email = email;
+          res.redirect("/pages/shop");
         });
       });
 
@@ -174,7 +229,64 @@ amqp.connect("amqp://localhost", (err, connection) => {
               },
             });
           }
-          res.render("pages/shop");
+          req.session.isLoggedIn = true;
+          req.session.email = email;
+          res.render("pages/shop", {
+            error: null,
+            isLoggedIn: req.session.isLoggedIn,
+            route: "pages/shop",
+            cart: responseParsed.data,
+          });
+        });
+      });
+
+      app.post("/logout", (req, res) => {
+        req.session.isLoggedIn = false;
+        req.session.email = null;
+        res.render("pages/shop", {
+          isLoggedIn: req.session.isLoggedIn,
+          route: "pages/shop",
+        });
+      });
+
+      app.post("/add-product", (req, res) => {
+        if (!req.session.isLoggedIn) {
+          res.redirect("/pages/login");
+          return;
+        }
+
+        const data = JSON.stringify({
+          operation: "add-product",
+          email: req.session.email,
+        });
+
+        channel.sendToQueue("rpc_queue", Buffer.from(data), {
+          correlationId: correlationId,
+          replyTo: replyQueue.queue,
+          headers: {
+            function: data.operation,
+          },
+        });
+
+        Event.once(correlationId, (data) => {
+          const responseParsed = JSON.parse(data.content.toString());
+          if (responseParsed.status == "ERROR") {
+            res.render("pages/shop", {
+              error: responseParsed.message,
+              isLoggedIn: req.session.isLoggedIn,
+              route: "pages/shop",
+              cart: 0,
+            });
+            return;
+          }
+
+          res.redirect("/pages/shop");
+          // res.render("pages/shop", {
+          //   error: null,
+          //   isLoggedIn: req.session.isLoggedIn,
+          //   route: "pages/shop",
+          //   cart: responseParsed.data,
+          // });
         });
       });
 
