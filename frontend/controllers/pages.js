@@ -15,3 +15,14 @@ exports.getLogin = (req, res, next) => {
     isLoggedIn: req.session.isLoggedIn,
   });
 };
+
+exports.getProductPage = (req, res) => {
+  res.render("pages/product-display", {
+    error: {
+      message: null,
+      type: null,
+    },
+    route: "pages/product",
+    isLoggedIn: req.session.isLoggedIn,
+  });
+};

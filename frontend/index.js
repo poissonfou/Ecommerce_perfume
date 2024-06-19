@@ -269,24 +269,7 @@ amqp.connect("amqp://localhost", (err, connection) => {
         });
 
         Event.once(correlationId, (data) => {
-          const responseParsed = JSON.parse(data.content.toString());
-          if (responseParsed.status == "ERROR") {
-            res.render("pages/shop", {
-              error: responseParsed.message,
-              isLoggedIn: req.session.isLoggedIn,
-              route: "pages/shop",
-              cart: 0,
-            });
-            return;
-          }
-
           res.redirect("/pages/shop");
-          // res.render("pages/shop", {
-          //   error: null,
-          //   isLoggedIn: req.session.isLoggedIn,
-          //   route: "pages/shop",
-          //   cart: responseParsed.data,
-          // });
         });
       });
 

@@ -1,4 +1,17 @@
-//selects all products carrousels
+const productImg = document.getElementById("productImg");
+
+function test(event, url) {
+  console.log("hereee");
+  var element = document.getElementById("product__img__container");
+  element.style.display = "inline-block";
+  element.style.backgroundImage = `url(${url})`;
+  var posX = event.offsetX
+    ? event.offsetX
+    : event.pageX - productImg.offsetLeft;
+  var posY = event.offsetY ? event.offsetY : event.pageY - productImg.offsetTop;
+  element.style.backgroundPosition = -posX * 4 + "px " + -posY * 4 + "px";
+}
+
 const productsCarrousel = document.getElementsByClassName(
   "products__carrousel"
 );
@@ -19,7 +32,6 @@ function hideArrows(arrowForward, arrowBackward) {
 
 //moves the scroll bar to the right
 function moveForward(element) {
-  console.log("on est la");
   element.scrollBy({ left: 350, behavior: "smooth" });
 }
 
@@ -66,9 +78,3 @@ for (let i = 0; i < productCards.length; i++) {
     window.location.href = "/pages/product";
   });
 }
-
-//submits logout form
-const logoutBtn = document.getElementById("logout__btn");
-logoutBtn?.addEventListener("click", () => {
-  document.getElementById("logout-form").submit();
-});

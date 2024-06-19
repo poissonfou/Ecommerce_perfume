@@ -178,7 +178,7 @@ amqp.connect("amqp://localhost", (err, connection) => {
         const response = JSON.stringify({
           status: "OK",
           message: null,
-          data: fileData[userIdx].cart,
+          data: null,
         });
         channel.sendToQueue(data.properties.replyTo, Buffer.from(response), {
           correlationId: data.properties.correlationId,

@@ -1,0 +1,413 @@
+<%- include("../includes/head.ejs") %>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/product-display.css">
+    <script src="/js/product-display.js" defer></script>
+    <title>NEU</title>
+    </head>
+
+    <body>
+        <%- include('../includes/header.ejs') %>
+            <main>
+                <section class="product__grid">
+                    <div class="first__collumn">
+                        <div class="product__img__container" onmousemove="(e) => test(e, '/assets/perfume_fruits.jpg')">
+                            <img src="/assets/perfume_fruits.jpg" alt="product img" id="productImg">
+                        </div>
+                        <div class="product__desc__full">
+                            <h2>About this product</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus qui quam vel vitae?
+                                Voluptatibus aliquid nam debitis, nihil veritatis, labore, inventore earum in
+                                dignissimos sint alias quaerat maiores aspernatur doloremque! Lorem ipsum dolor, sit
+                                amet consectetur adipisicing elit. Earum iste corporis necessitatibus blanditiis tempora
+                                quo explicabo, magnam saepe officiis. Maxime iusto voluptates dolores, culpa dicta
+                                laboriosam. Magnam aut consectetur non.</p>
+                        </div>
+                        <div class="product__reviews">
+                            <div class="reviews__header">
+                                <h2>Reviews</h2>
+                                <div>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <span class="reviews__avr">4.7/5</span>
+                                <button>Review</button>
+                            </div>
+                            <div class="reviews__bars">
+                                <label for="five_stars">5 stars</label>
+                                <meter value="3" max="3" id="five_stars"></meter>
+                                <span>3</span>
+                                <label for="four_stars">4 stars</label>
+                                <meter id="four_stars"></meter>
+                                <span>0</span>
+                                <label for="three_stars">3 stars</label>
+                                <meter id="three_stars"></meter>
+                                <span>0</span>
+                                <label for="two_stars">2 stars</label>
+                                <meter id="two_stars"></meter>
+                                <span>0</span>
+                                <label for="one_stars">1 stars</label>
+                                <meter id="one_stars"></meter>
+                                <span>0</span>
+                            </div>
+                            <div>
+                                <div class="review">
+                                    <span>User</span>
+                                    <div>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>This is a review of the product. This is a really good product!!</p>
+                                </div>
+                                <div class="review">
+                                    <span>User</span>
+                                    <div>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>This is a review of the product. This is a really good product!!</p>
+                                </div>
+                                <div class="review">
+                                    <span>User</span>
+                                    <div>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p>This is a review of the product. This is a really good product!!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__info second__collumn">
+                        <h2>This is the name of the product. This a really good product.</h2>
+                        <p class="price">R$ 150.00</p>
+                        <p class="price__installments">6x R$ 25.00</p>
+                        <div class="stars__product__info">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <button>BUY</button>
+                        <div class="delivery__calc">
+                            <p>Delivery cost</p>
+                            <div class="delivery__calc__input__box">
+                                <input type="text" placeholder="zip code">
+                                <button>OK</button>
+                            </div>
+                        </div>
+
+                        <div class="product__recs">
+                            <p>Often bought together</p>
+                            <div class="product__recs__grid">
+                                <div>
+                                    <img src="/assets/blue_perfumes.jpg" alt="product image">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <p class="recs__price">R$89.90</p>
+                                </div>
+                                <div>
+                                    <img src="/assets/blue_perfumes.jpg" alt="product image">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <p class="recs__price">R$89.90</p>
+                                </div>
+                                <div>
+                                    <img src="/assets/blue_perfumes.jpg" alt="product image">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <p class="recs__price">R$89.90</p>
+                                </div>
+                                <div>
+                                    <img src="/assets/blue_perfumes.jpg" alt="product image">
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    <p class="recs__price">R$89.90</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <section class="product__recs__carrousels__container">
+                    <h1>Recommended for you</h1>
+                    <div class="product__collection product__collection--one">
+
+                        <span class="material-symbols-outlined arrow arrow__backward__one" id="arrow__backward__0">
+                            arrow_back_ios
+                        </span>
+                        <span class="material-symbols-outlined arrow arrow__forward__one" id="arrow__forward__0">
+                            arrow_forward_ios
+                        </span>
+
+                        <div class="row products__carrousel">
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__collection product__collection--two">
+
+                        <span class="material-symbols-outlined arrow arrow__backward__two" id="arrow__backward__1">
+                            arrow_back_ios
+                        </span>
+                        <span class="material-symbols-outlined arrow arrow__forward__two" id="arrow__forward__1">
+                            arrow_forward_ios
+                        </span>
+
+                        <div class="row products__carrousel">
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product__card">
+                                <img src="/assets/perfume_fruits.jpg" alt="">
+                                <p class="product__title">Product Title</p>
+                                <p class="product__price">R$ 200,00</p>
+                                <div class="product__desc">
+                                    <p>This is product description, describing what the product does.</p>
+                                    <div class="hover__btn">
+                                        <button>BUY</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <%- include('../includes/footer.ejs') %>
+    </body>
+
+    </html>
