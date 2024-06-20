@@ -20,7 +20,7 @@ header {
 .first__collumn img {
   width: 100%;
   height: 35em;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
 }
 
@@ -403,4 +403,34 @@ header {
 
 footer {
   margin-top: 2em;
+}
+
+#img-zoomer-box {
+  position: relative;
+}
+
+#img-zoomer-box:hover,
+#img-zoomer-box:active {
+  cursor: none;
+  display: block;
+}
+
+#img-zoomer-box:hover #img-2,
+#img-zoomer-box:active #img-2 {
+  opacity: 1;
+}
+
+#img-2 {
+  width: 340px;
+  height: 340px;
+  background: url("/assets/perfume_fruits.jpg") no-repeat #fff;
+  box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  position: absolute;
+  opacity: 0;
+  border: 4px solid whitesmoke;
+  z-index: 3;
+  border-radius: 100%;
+  display: block;
+  transition: opacity 0.2s;
 }

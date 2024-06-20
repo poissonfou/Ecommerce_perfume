@@ -1,16 +1,33 @@
-const productImg = document.getElementById("productImg");
+const imageBox = document.querySelector("#img-zoomer-box");
+const original = document.querySelector("#productImg");
+const magnified = document.querySelector("#img-2");
 
-function test(event, url) {
-  console.log("hereee");
-  var element = document.getElementById("product__img__container");
-  element.style.display = "inline-block";
-  element.style.backgroundImage = `url(${url})`;
-  var posX = event.offsetX
-    ? event.offsetX
-    : event.pageX - productImg.offsetLeft;
-  var posY = event.offsetY ? event.offsetY : event.pageY - productImg.offsetTop;
-  element.style.backgroundPosition = -posX * 4 + "px " + -posY * 4 + "px";
+function handleMouseMoves(e) {
+  const style = magnified.style;
+  const x = e.pageX - this.offsetLeft;
+  const y = e.pageY - this.offsetTop;
+  const imgWidth = original.offsetWidth;
+  const imgHeight = original.offsetHeight;
+  let xperc = (x / imgWidth) * 100;
+  let yperc = (y / imgHeight) * 100;
+
+  //lets user scroll past right edge of image
+  if (x >= 0.01 * imgWidth) {
+    xperc *= 1.15;
+  }
+
+  //lets user scroll past bottom edge of image
+  if (y >= 0.01 * imgHeight) {
+    yperc *= 1.15;
+  }
+
+  style.backgroundPositionX = `${xperc - 9}%`;
+  style.backgroundPositionY = `${yperc - 9}%`;
+  style.left = `${x - 180}px`;
+  style.top = `${y - 180}px`;
 }
+
+imageBox.addEventListener("mousemove", handleMouseMoves);
 
 const productsCarrousel = document.getElementsByClassName(
   "products__carrousel"
